@@ -1048,6 +1048,18 @@ chain.third()
 => 3
 ```
 
+### `uniq`
+
+Creates a duplicate-value-free version of an array.
+
+```swift
+$.chain([1, 2.5, 3, 1.5, 2, 3.5])
+    .uniq { floor($0) }
+    .value
+
+=> [1, 2.5, 3]
+```
+
 ### `flatten`
 
 Flattens a nested array of any depth.
